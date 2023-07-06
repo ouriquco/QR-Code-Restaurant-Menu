@@ -1,0 +1,5 @@
+.venv/
+__pycache__
+db.yaml
+.DS_Store
+database/

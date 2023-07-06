@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  overflow-x: hidden;
+}
+
+.table-container {
+  height: calc(100vh - 128px);
+}
+
+.table-top {
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.2);
+}
+
+.top-nav {
+  flex:1;
+}
+
+.top-nav:first-child,
+.top-nav:last-child {
+  font-size: 1.35rem !important;
+  cursor: pointer;
+}
+
+.top-nav:first-child {
+  color: paleturquoise;
+}
+
+.table-buttons button {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.table-buttons button:hover {
+  background-color: grey;
+}
+
+
+.table-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.table-list {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.table-number {
+  font-size: 18px;
+}
+
+.table-empty {
+  background-color: grey;
+  color:white 
+}
+
+.table-empty:hover {
+  background-color: black;
+}
+
+.table-occupied {
+  background-color: red;
+  color:white;
+}
+
+.table-occupied:hover {
+  background-color: grey;
+}
+
+
+.order-info {
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+.list-right {
+  color:grey;
+}
+
+.list-left i {
+  color: gainsboro;
+}
+
+.order-border {
+  position: absolute;
+  border-bottom: 1px solid gainsboro;
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.summary-list {
+  display:flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.summary-info {
+  padding: 0.3rem  0.7rem 0rem 0.7rem;
+  display:flex;
+  justify-content: space-between;
+}
+
+.summary-info span:nth-child(1) {
+  font-weight: bold;
+}
+
+.summary-info span:nth-child(2) {
+  color:grey;
+  font-size: 14px;
+}
+
+
+.order-buttons button {
+  margin-bottom: 1rem;
+  width:50%;
+  padding:0.9rem 0.33rem 0.9rem 0.33rem;
+  border-radius: 15px;
+  border:none;
+}
+
+.order-buttons button:nth-child(1) {
+  background: #8F5E0B;
+  font-weight: bold;
+  color:white;
+}
+
+.order-buttons button:nth-child(2) {
+  background: #C9EE36;
+  font-weight: bold;
+  color:black;
+}
+
+.dropdown-toggle  {
+  bottom: -1px;
+}
+
+.global-nav-links .dropdown ul {
+  top: calc(100% + 20px);
+  box-shadow: 3px 0px 20px #D1D1D1;
+  background-color: #fff;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+}
+
+.global-nav-links .dropdown:hover > ul {
+  visibility: visible;
+  top:100%;
+  opacity: 1;
+  z-index: 10;
+}
+
+.nav-link {
+  min-width: 50px;
+  margin-bottom: 5px;
+}
+
+.item-img {
+  object-fit: cover;
+}
+
+.item-container {
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+.item-price {
+  color:crimson
+}
+
+
+.modal-container {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-wrapper {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.cart-icon {
+  color: white !important;
+}
+
+
+@media only screen and (min-width: 280px) and (max-width: 1248px) {
+  .table-wrapper {
+    width: 100%;
+  }
+
+  .table-top {
+    padding: 0;
+  }
+
+  .table-list {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .table-bottom {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  
+  .order-buttons button {
+    width: 80%;
+  }
+
+  .table-number {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+  }
+
+  .global-nav-links {
+    margin:0;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .nav-ele {
+    margin-left: 1.5rem;
+  }
+
+  .table-mid {
+    margin:0;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .table-detail-bottom  {
+    width: 100%;
+    height: 100%;
+    margin:0;
+    margin-top: 0;
+  }
+
+  .table-detail-name {
+    display:none;
+  }
+
+  .order-buttons {
+    margin-top: 0;
+  }
+
+  .order-buttons button {
+    width: 40%;
+  }
+
+  .order-amount {
+    font-size: 12px;
+  }
+
+  .order-name {
+    font-size: 14px;
+  }
+
+  .list-right {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .table-button {
+    padding: 0.325rem 0.5rem 0.325rem 0.5rem;
+  }
+
+  .admin-buttons {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .admin-cate {
+    display:none;
+    margin:0;
+  }
+
+  .admin-bottom {
+    width:100%;
+  }
+
+  .item-left {
+    flex:1;
+  }
+  .item-right {
+    flex:1;
+  }
+}
+
+@media only screen and (min-width: 1248px) and (max-width: 1990px) {
+
+  .table-container {
+    height: 100%;
+  }
+
+  .table-detail-name {
+    display:none;
+  }
+}

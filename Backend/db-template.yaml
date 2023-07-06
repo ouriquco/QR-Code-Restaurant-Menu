@@ -1,0 +1,5 @@
+Create a file called db.yaml with the following content:
+mysql_host: ''
+mysql_user: ''
+mysql_password: ''
+mysql_db: ''
